@@ -21,15 +21,20 @@ Before proceeding, ensure the following are installed on your system:
    ```bash
    cd Dockerized-Text-Editor
 
-3. **Build the Docker image**  
+3. **Change Permissions for text_editor.py**  
+   Change the permissions for text_editor.py to allow executing:
+   ```bash
+   chmod +x src/text_editor.py
+
+4. **Build the Docker image**  
    Build the Docker image using the provided Dockerfile:
    ```bash
    docker build -t dockerized-text-editor .
 
-4. **Run the application with x11docker**  
+5. **Run the application with x11docker**  
    Start the GUI application in a container using x11docker:
    ```bash
    x11docker dockerized-text-editor
 
-5. **Access the text editor**  
+6. **Access the text editor**  
    Once the container is running, the GUI-based text editor will be displayed, allowing you to test and use the application.
